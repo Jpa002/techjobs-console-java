@@ -130,18 +130,19 @@ public class JobData {
         loadData();
         String statement = "Not found";
         String getUserSelection = searchValue;
-        String jobs = new ArrayList<E>();
+        ArrayList<String> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(getUserSelection);
 
             if (aValue.contains(getUserSelection)) {
-                return jobs;
+                return searchValue;
 
-            }  else{
-            return statement;
+            } else {
+                return statement;
+            }
         }
+        return statement;
     }
-} return jobs;
 }
